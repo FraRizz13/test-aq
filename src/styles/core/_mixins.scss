@@ -1,0 +1,27 @@
+@mixin default-size {
+  padding: space(64, 128) space(20, 40);
+}
+
+// use:
+// @include auto-grid(300px);
+@mixin auto-grid($min-width) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min($min-width, 100%), 1fr));
+  grid-auto-rows: max-content;
+}
+
+// use:
+// @include grid(3);
+@mixin grid($column-count) {
+  display: grid;
+  grid-template-columns: repeat($column-count, 1fr);
+  grid-auto-rows: max-content;
+}
+
+@mixin hover {
+  @media (min-width: #{$vw-desktop}px) and (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}

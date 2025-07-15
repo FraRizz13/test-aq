@@ -1,0 +1,27 @@
+@import './core/colors';
+
+:root {
+  // spacings
+  --s-3xs: 4px; // 4px
+  --s-2xs: 8px; // 8px //16px
+  --s-xs: 16px; // 16px
+  --s-s: 24px; // 24px
+  --s-m: 32px; // 32px
+  --s-ml: 40px; // 40px
+  --s-l: 48px; // 48px
+  --s-xl: 64px; // 64px
+  --s-2xl: 96px; // 96px
+  --s-3xl: 128px; // 128px
+  --s-4xl: 156px; // 156px
+  --s-5xl: 180px; // 180px
+  --s-6xl: 200px; // 200px
+
+  // colors
+  --c-white: #{$white};
+  --c-black: #{$black};
+  --c-blue: #{$blue};
+  --c-light-blue: #{$light-blue};
+  --c-cyan: #{$cyan};
+  --c-light-cyan: #{$light-cyan};
+  --c-gray: #{$gray};
+}
