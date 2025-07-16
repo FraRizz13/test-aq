@@ -25,3 +25,30 @@
     }
   }
 }
+@mixin heroEntrance() {
+  animation: entrance 1s forwards 1s;
+
+  @keyframes entrance {
+    from {
+      clip-path: inset(0 0 0 0 round 0rem);
+    }
+
+    to {
+      clip-path: inset(calc(space(16, 32)) var(--s-xs) space(16, 32) var(--s-xs) round 3rem);
+    }
+  }
+}
+
+@mixin heroEntranceDesktop() {
+  animation: entrance 1s forwards 1s;
+
+  @keyframes entrance {
+    from {
+      clip-path: inset(0 0 0 0 round 0rem);
+    }
+
+    to {
+      clip-path: inset(calc(space(16, 32)) var(--s-m) space(16, 32) var(--s-m) round 3rem);
+    }
+  }
+}

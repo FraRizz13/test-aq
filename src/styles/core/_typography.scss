@@ -5,14 +5,14 @@ $vw-mobile-t: 375;
   @return ($desktopFont - $mobileFont) / ($vw-desktop-t - $vw-mobile-t);
 }
 
-@mixin space-grotesk-base {
+@mixin neue-machina-base {
   --font-width: 80;
   --font-ctgr: 100;
   --line-height: 1;
   --font-size-fallback: 1rem;
 
   font-weight: 400;
-  font-family: var(--font-space-grotesk), sans-serif;
+  font-family: 'NeueMachina', sans-serif;
   line-height: var(--line-height);
   letter-spacing: var(--letter-spacing);
   font-size: var(--font-size-fallback);
@@ -39,7 +39,7 @@ $vw-mobile-t: 375;
 }
 
 @mixin heading-xxl {
-  @include space-grotesk-base;
+  @include neue-machina-base;
   font-size: 98px;
   font-weight: 500;
   --line-height: 76px;
@@ -47,19 +47,19 @@ $vw-mobile-t: 375;
 }
 
 @mixin heading-xl {
-  @include space-grotesk-base;
+  @include neue-machina-base;
   font-size: 76px;
   --letter-spacing: -2.8px;
 }
 
 @mixin heading-l {
-  @include space-grotesk-base;
+  @include neue-machina-base;
   font-size: 60px;
   --letter-spacing: -1.2px;
 }
 
 @mixin heading-l-l {
-  @include space-grotesk-base;
+  @include neue-machina-base;
   font-weight: 300;
   font-size: 60px;
   --line-height: 70px;
@@ -67,28 +67,28 @@ $vw-mobile-t: 375;
 }
 
 @mixin heading-m {
-  @include space-grotesk-base;
+  @include neue-machina-base;
   font-size: 50px;
   --line-height: 52px;
   --letter-spacing: -1px;
 }
 
 @mixin heading-sm {
-  @include space-grotesk-base;
+  @include neue-machina-base;
   font-size: 40px;
   font-weight: 400;
   --letter-spacing: -0.8px;
 }
 
 @mixin heading-s {
-  @include space-grotesk-base;
+  @include neue-machina-base;
   font-size: 30px;
   --line-height: 1.2;
   --letter-spacing: -0.6px;
 }
 
 @mixin heading-s-l {
-  @include space-grotesk-base;
+  @include neue-machina-base;
   font-weight: 300;
   font-size: 30px;
   --line-height: 1;
@@ -96,7 +96,7 @@ $vw-mobile-t: 375;
 }
 
 @mixin heading-xs {
-  @include space-grotesk-base;
+  @include neue-machina-base;
   font-weight: 300;
   font-size: 24px;
   --line-height: 1.25;
@@ -104,7 +104,7 @@ $vw-mobile-t: 375;
 }
 
 @mixin body-xl {
-  @include space-grotesk-base;
+  @include neue-machina-base;
   @include light;
   font-size: 26px;
   --line-height: 1.2;
@@ -112,7 +112,7 @@ $vw-mobile-t: 375;
 }
 
 @mixin body-l {
-  @include space-grotesk-base;
+  @include neue-machina-base;
   @include light;
   font-size: 22px;
   --line-height: 1.2;
@@ -120,27 +120,27 @@ $vw-mobile-t: 375;
 }
 
 @mixin body-ml {
-  @include space-grotesk-base;
+  @include neue-machina-base;
   @include light;
   font-size: 16px;
   --line-height: 18px;
 }
 
 @mixin body-m {
-  @include space-grotesk-base;
+  @include neue-machina-base;
   font-size: 14px; //14px
   --line-height: 18px;
 }
 
 @mixin body-s {
-  @include space-grotesk-base;
+  @include neue-machina-base;
   font-size: 12px; //12px
   --line-height: 1.2;
   --letter-spacing: 0.24px;
 }
 
 @mixin label {
-  @include space-grotesk-base;
+  @include neue-machina-base;
   @include medium-m;
   font-size: 11px; //11px
   --letter-spacing: 0.33px;
@@ -148,7 +148,7 @@ $vw-mobile-t: 375;
 }
 
 @mixin callout {
-  @include space-grotesk-base;
+  @include neue-machina-base;
   @include bold;
   text-transform: uppercase;
   font-size: 14px; // 14px
