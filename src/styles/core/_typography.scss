@@ -18,6 +18,19 @@ $vw-mobile-t: 375;
   font-size: var(--font-size-fallback);
 }
 
+@mixin seol-standard-base {
+  --font-width: 80;
+  --font-ctgr: 100;
+  --line-height: 1;
+  --font-size-fallback: 1rem;
+
+  font-weight: 300;
+  font-family: 'SaolStandard', sans-serif;
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  font-size: var(--font-size-fallback);
+}
+
 @mixin light {
   font-weight: 300;
 }
@@ -38,120 +51,116 @@ $vw-mobile-t: 375;
   font-weight: 800;
 }
 
-@mixin heading-xxl {
+@mixin display-160-machina {
   @include neue-machina-base;
-  font-size: 98px;
-  font-weight: 500;
-  --line-height: 76px;
-  --letter-spacing: -3.92px;
+  font-size: 160px;
+  line-height: 1;
 }
 
-@mixin heading-xl {
-  @include neue-machina-base;
-  font-size: 76px;
-  --letter-spacing: -2.8px;
-}
-
-@mixin heading-l {
+@mixin display-60-machina {
   @include neue-machina-base;
   font-size: 60px;
-  --letter-spacing: -1.2px;
+  line-height: 1;
 }
 
-@mixin heading-l-l {
-  @include neue-machina-base;
-  font-weight: 300;
+@mixin display-160-seol {
+  @include seol-standard-base;
+  font-size: 160px;
+  line-height: 1;
+}
+
+@mixin display-60-seol {
+  @include seol-standard-base;
   font-size: 60px;
-  --line-height: 70px;
-  --letter-spacing: -1.2px;
+  line-height: 1;
 }
 
-@mixin heading-m {
+@mixin headline-96-machina {
   @include neue-machina-base;
-  font-size: 50px;
-  --line-height: 52px;
-  --letter-spacing: -1px;
+  font-size: 96px;
+  line-height: 1;
 }
 
-@mixin heading-sm {
+@mixin headline-64-machina {
+  @include neue-machina-base;
+  font-size: 64px;
+  line-height: 1;
+}
+
+@mixin headline-56-machina {
+  @include neue-machina-base;
+  font-size: 56px;
+  line-height: 1;
+}
+
+@mixin headline-48-machina {
+  @include neue-machina-base;
+  font-size: 48px;
+  line-height: 1;
+}
+
+@mixin headline-40-machina {
   @include neue-machina-base;
   font-size: 40px;
-  font-weight: 400;
-  --letter-spacing: -0.8px;
+  line-height: 1;
 }
 
-@mixin heading-s {
+@mixin headline-32-machina {
   @include neue-machina-base;
-  font-size: 30px;
-  --line-height: 1.2;
-  --letter-spacing: -0.6px;
+  font-size: 32px;
+  line-height: 1;
 }
 
-@mixin heading-s-l {
-  @include neue-machina-base;
-  font-weight: 300;
-  font-size: 30px;
-  --line-height: 1;
-  --letter-spacing: -0.6px;
+@mixin headline-96-seol {
+  @include seol-standard-base;
+  font-size: 96px;
+  line-height: 1;
 }
 
-@mixin heading-xs {
-  @include neue-machina-base;
-  font-weight: 300;
+@mixin headline-64-seol {
+  @include seol-standard-base;
+  font-size: 64px;
+  line-height: 1;
+}
+
+@mixin headline-56-seol {
+  @include seol-standard-base;
+  font-size: 56px;
+  line-height: 1;
+}
+
+@mixin headline-48-seol {
+  @include seol-standard-base;
+  font-size: 48px;
+  line-height: 1;
+}
+
+@mixin headline-40-seol {
+  @include seol-standard-base;
+  font-size: 40px;
+  line-height: 1;
+}
+
+@mixin headline-32-seol {
+  @include seol-standard-base;
+  font-size: 32px;
+  line-height: 1;
+}
+
+@mixin headline-24-seol {
+  @include seol-standard-base;
   font-size: 24px;
-  --line-height: 1.25;
-  --letter-spacing: -0.24px;
 }
 
-@mixin body-xl {
+@mixin body-16-machina {
   @include neue-machina-base;
-  @include light;
-  font-size: 26px;
-  --line-height: 1.2;
-  --letter-spacing: -0.52px;
-}
-
-@mixin body-l {
-  @include neue-machina-base;
-  @include light;
-  font-size: 22px;
-  --line-height: 1.2;
-  --letter-spacing: -0.44px;
-}
-
-@mixin body-ml {
-  @include neue-machina-base;
-  @include light;
   font-size: 16px;
-  --line-height: 18px;
+  line-height: 1.5;
 }
 
-@mixin body-m {
+@mixin body-12-machina {
   @include neue-machina-base;
-  font-size: 14px; //14px
-  --line-height: 18px;
-}
-
-@mixin body-s {
-  @include neue-machina-base;
-  font-size: 12px; //12px
-  --line-height: 1.2;
-  --letter-spacing: 0.24px;
-}
-
-@mixin label {
-  @include neue-machina-base;
-  @include medium-m;
-  font-size: 11px; //11px
-  --letter-spacing: 0.33px;
+  font-size: 12px;
   text-transform: uppercase;
-}
-
-@mixin callout {
-  @include neue-machina-base;
-  @include bold;
-  text-transform: uppercase;
-  font-size: 14px; // 14px
-  --line-height: 1.2;
-  --letter-spacing: 0.56px;
+  letter-spacing: 1px;
 }

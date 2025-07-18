@@ -26,7 +26,7 @@ const HeroHome = (): React.JSX.Element => {
 
         <div className={cn('content')}>
           <h1 className={cn('title')}>
-            <div className={cn('textWrapper')}>
+            <div className={cn('textWrapper', 'first')}>
               <motion.div>
                 {'Everything'.split('').map((letter, index) => (
                   <motion.span
@@ -40,7 +40,7 @@ const HeroHome = (): React.JSX.Element => {
                 ))}{' '}
               </motion.div>
             </div>
-            <div className={cn('textWrapper')}>
+            <div className={cn('textWrapper', 'second')}>
               <motion.div>
                 {'to'.split('').map((letter, index) => (
                   <motion.span
@@ -65,7 +65,7 @@ const HeroHome = (): React.JSX.Element => {
                 ))}
               </motion.div>
             </div>
-            <div className={cn('textWrapper')}>
+            <div className={cn('textWrapper', 'third')}>
               <motion.div>
                 {'max'.split('').map((letter, index) => (
                   <motion.span

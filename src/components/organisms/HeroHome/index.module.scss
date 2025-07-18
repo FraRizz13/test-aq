@@ -60,42 +60,47 @@
 
   .content {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
     z-index: 1;
     text-emphasis: none;
-    text-align: center;
     color: white;
-    padding: space(64, 72) 0;
-
-    height: 100%;
-    max-width: space(800, 1200);
-
-    .pretitle {
-      @include heading-xs;
-      letter-spacing: 0;
-      margin-bottom: var(--s-s);
-
-      @include medium {
-        @include heading-s;
-      }
-    }
+    max-width: toRem(550);
+    text-align: right;
 
     .title {
-      @include heading-l;
+      @include display-60-machina;
 
       @include medium {
-        @include heading-xxl;
+        @include display-160-machina;
       }
     }
 
     .textWrapper {
       overflow: hidden;
 
-      // span {
-      //   display: inline-block;
-      // }
+      &.third {
+        padding-inline-end: space(8, 16);
+      }
 
-      &.italic {
-        font-style: italic;
+      &.second {
+        padding-inline-end: space(64, 96);
+      }
+
+      &.first {
+        padding-inline-end: space(16, 32);
+      }
+
+      &.first,
+      &.third {
+        @include display-60-seol;
+        text-transform: uppercase;
+
+        @include medium {
+          @include display-160-seol;
+        }
       }
     }
   }

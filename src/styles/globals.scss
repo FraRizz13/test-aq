@@ -55,7 +55,7 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  @include body-m;
+  @include body-16-machina;
 
   // wont work on safari, replaced with stopOverscroll() ref: https://gsap.com/docs/v3/HelperFunctions/helpers/stopOverscroll/
   overscroll-behavior: none;
