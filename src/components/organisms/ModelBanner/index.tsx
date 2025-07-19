@@ -1,9 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
 'use client'
 
 import React, { useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { useGLTF, ContactShadows, Environment } from '@react-three/drei'
+import * as THREE from 'three'
 
 //styles
 import classNames from 'classnames/bind'
@@ -14,8 +14,8 @@ interface ModelBannerProps {
   title?: string | React.ReactNode
 }
 
-function Show(props: any) {
-  const ref = useRef<any>(null)
+function Show(props: React.ComponentProps<'group'>) {
+  const ref = useRef<THREE.Group>(null)
   const { scene } = useGLTF('/assets/nike_adapt.glb')
 
   useFrame(state => {

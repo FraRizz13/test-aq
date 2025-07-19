@@ -1,5 +1,9 @@
 @mixin default-size {
-  padding: space(64, 128) space(20, 40);
+  padding: space(64, 160) space(20, 40);
+
+  @include xlarge {
+    padding-inline: space(128, 160);
+  }
 }
 
 // use:

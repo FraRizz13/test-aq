@@ -1,0 +1,82 @@
+.wrapper {
+  @include default-size;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--s-ml);
+
+    @include medium {
+      display: flex;
+      flex-direction: row;
+      gap: toRem(100);
+    }
+
+    .title {
+      h3 {
+        @include headline-48-machina;
+
+        @include medium {
+          @include headline-64-machina;
+        }
+      }
+
+      span {
+        @include headline-48-seol;
+
+        @include medium {
+          @include headline-64-seol;
+        }
+      }
+      @include medium {
+        flex: 1;
+      }
+    }
+
+    .image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1/1;
+
+      @include medium {
+        flex: 0 0 40%;
+      }
+
+      img {
+        border-radius: toRem(30);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 10;
+      }
+    }
+
+    .description-desktop {
+      display: none;
+
+      @include medium {
+        display: block;
+        margin-top: toRem(160);
+      }
+    }
+
+    .description-mobile {
+      display: block;
+
+      @include medium {
+        display: none;
+      }
+    }
+
+    .description {
+      @include medium {
+        flex-basis: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

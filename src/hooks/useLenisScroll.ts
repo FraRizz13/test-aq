@@ -9,7 +9,10 @@ export const useLenisScroll = () => {
     lenisRef.current = lenis
   }, [lenis])
 
-  const scrollTo = (target: string | number, options?: any) => {
+  const scrollTo = (
+    target: string | number,
+    options?: { offset?: number; duration?: number; easing?: (t: number) => number },
+  ) => {
     if (lenisRef.current) {
       lenisRef.current.scrollTo(target, options)
     }
