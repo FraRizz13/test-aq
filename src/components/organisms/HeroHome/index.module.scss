@@ -2,6 +2,14 @@
   height: 100%;
   min-height: 100vh;
 
+  .logo-container {
+    position: fixed;
+    top: var(--s-m);
+    left: var(--s-s);
+    z-index: 999;
+    mix-blend-mode: exclusion;
+    color: white;
+  }
   .wrapper-bg {
     position: relative;
     inset: 0;

@@ -1,9 +1,10 @@
 'use client'
 
-import React, { useEffect, useRef, useMemo } from 'react'
+import React, { useEffect, useRef, useMemo, useState } from 'react'
 import Link from 'next/link'
 import Icon from '@/components/atoms/Icon'
 import { useBreakpoint } from '@/types/generic'
+import SiteMenu from '@/components/molecules/SiteMenu'
 // styles
 import styles from './index.module.scss'
 import classNames from 'classnames/bind'
@@ -13,6 +14,7 @@ const cn = classNames.bind(styles)
 const SiteHeader = () => {
   const headerRef = useRef<HTMLElement>(null)
   const isMediumOrAbove = useBreakpoint('medium')
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   // animate in pages with Hero:
   const pagesWithHero = useMemo(() => ['/'], [])
@@ -36,9 +38,9 @@ const SiteHeader = () => {
         {!isMediumOrAbove ? (
           // Mobile content
           <div className={cn('mobile-content')}>
-            <Link href='/intro' className={cn('link', 'intro-link')}>
-              <p>Intro</p>
-            </Link>
+            <button onClick={() => setIsMenuOpen(true)} className={cn('link', 'menu-link')}>
+              <p>Menù</p>
+            </button>
             <div className={cn('logo-container')}>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -74,6 +76,8 @@ const SiteHeader = () => {
           </div>
         )}
       </div>
+
+      <SiteMenu isOpen={isMenuOpen} onOpenChange={setIsMenuOpen} />
     </header>
   )
 }
