@@ -41,7 +41,7 @@ const TextImage = ({ title, image, description, alt }: TextImageProps) => {
   })
 
   const y = useTransform(scrollYProgress, [0, 1], [0, 400])
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, 8])
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, 5])
 
   return (
     <div ref={ref}>
@@ -63,7 +63,7 @@ const TextImage = ({ title, image, description, alt }: TextImageProps) => {
             className={cn('image')}
             style={{
               y: isDesktop ? y : 0,
-              rotate: isDesktop ? rotate : 0,
+              rotate: isDesktop ? rotate : rotate,
             }}
           >
             <NextImage src={image || ''} alt={alt || ''} fill style={{ objectFit: 'cover' }} />

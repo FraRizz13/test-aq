@@ -12,6 +12,7 @@ const cn = classNames.bind(style)
 
 interface ModelBannerProps {
   title?: string | React.ReactNode
+  author?: string
 }
 
 function Show(props: React.ComponentProps<'group'>) {
@@ -33,7 +34,7 @@ function Show(props: React.ComponentProps<'group'>) {
   )
 }
 
-export default function ModelBanner({ title }: ModelBannerProps) {
+export default function ModelBanner({ title, author }: ModelBannerProps) {
   return (
     <div className={cn('wrapper')}>
       {/* 3D Canvas */}
@@ -64,6 +65,12 @@ export default function ModelBanner({ title }: ModelBannerProps) {
             <p>{title}</p>
           )}
         </div>
+
+        {author && (
+          <div className={cn('author')}>
+            <span>{author}</span>
+          </div>
+        )}
       </div>
     </div>
   )

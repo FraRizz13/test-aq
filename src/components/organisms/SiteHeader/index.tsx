@@ -23,7 +23,7 @@ const SiteHeader = () => {
       gsap.fromTo(
         headerRef.current,
         { y: '450%', opacity: 1 },
-        { y: 0, duration: 0.8, delay: 1.2, ease: 'easeOut' },
+        { y: 0, duration: 0.8, delay: 0.8, ease: 'easeOut' },
       )
     }
   }, [pagesWithHero])

@@ -38,7 +38,7 @@
     }
 
     to {
-      clip-path: inset(calc(space(16, 32)) var(--s-xs) space(16, 32) var(--s-xs) round 3rem);
+      clip-path: inset(calc(space(12, 16)) space(12, 16) space(12, 16) space(12, 16) round 3rem);
     }
   }
 }
@@ -52,7 +52,7 @@
     }
 
     to {
-      clip-path: inset(calc(space(16, 32)) var(--s-m) space(16, 32) var(--s-m) round 3rem);
+      clip-path: inset(calc(space(12, 16)) space(12, 16) space(12, 16) space(12, 16) round 3rem);
     }
   }
 }

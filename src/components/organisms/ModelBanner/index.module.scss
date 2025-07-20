@@ -11,18 +11,18 @@
   .content {
     z-index: 2;
     pointer-events: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .title {
-    color: var(--c-white);
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     position: absolute;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 85vw;
+  }
+
+  .title {
+    color: var(--c-white);
 
     p {
       @include headline-64-machina;
@@ -38,6 +38,23 @@
       @include medium {
         @include headline-96-seol;
       }
+    }
+  }
+
+  .author {
+    @include body-12-machina;
+    margin-top: var(--s-ml);
+    color: var(--c-white);
+    display: flex;
+    align-items: flex-end;
+    gap: var(--s-xs);
+
+    &::before {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 5px;
+      background: var(--c-white);
     }
   }
 

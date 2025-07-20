@@ -55,6 +55,11 @@ $vw-mobile-t: 375;
   @include neue-machina-base;
   font-size: 160px;
   line-height: 1;
+
+  --font-size-min: 60px;
+  --font-size-max: 160px;
+
+  font-size: calc(var(--font-size-max) + (100vw - $vw-desktop-t * 1px) * getScalingFactor(160, 60));
 }
 
 @mixin display-60-machina {
@@ -67,6 +72,11 @@ $vw-mobile-t: 375;
   @include seol-standard-base;
   font-size: 160px;
   line-height: 1;
+
+  --font-size-min: 60px;
+  --font-size-max: 160px;
+
+  font-size: calc(var(--font-size-max) + (100vw - $vw-desktop-t * 1px) * getScalingFactor(160, 60));
 }
 
 @mixin display-60-seol {
