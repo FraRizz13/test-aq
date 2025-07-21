@@ -134,7 +134,7 @@
       .social-links-icons {
         display: flex;
         flex-direction: row;
-        gap: space(24, 40);
+        gap: var(--s-xs);
       }
 
       .icon {
