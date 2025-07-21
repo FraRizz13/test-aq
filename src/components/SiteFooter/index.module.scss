@@ -86,6 +86,12 @@
           text-align: center;
           @include body-12-machina;
           cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: var(--c-light-blue);
+            color: var(--c-black);
+          }
         }
       }
     }
