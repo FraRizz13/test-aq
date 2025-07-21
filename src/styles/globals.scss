@@ -33,7 +33,16 @@
   src: url('/font/SaolStandard-LightItalic.woff2') format('woff2');
   font-weight: 300;
   font-style: italic;
-  font-display: fallback;
+  font-display: swap;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'SaolStandard';
+  src: url('/font/SaolStandard-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
   font-stretch: normal;
 }
 
