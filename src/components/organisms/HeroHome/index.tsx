@@ -27,7 +27,7 @@ const HeroHome = (): React.JSX.Element => {
         <div className={cn('video-wrapper')}>
           <video muted width='100%' height='auto' autoPlay playsInline loop>
             <source src='/assets/intro_video.mp4' type='video/mp4' />
-            Il tuo browser non supporta il formato video.
+            Not supported
           </video>
           <div className={cn('layer-bg')}></div>
         </div>
@@ -63,7 +63,7 @@ const HeroHome = (): React.JSX.Element => {
                 {/* Added white space here */}
                 {'the'.split('').map((letter, index) => (
                   <motion.span
-                    key={`incontra-la-${index}`} // Changed key to avoid conflicts
+                    key={`the-${index}`}
                     initial={{ opacity: 0, y: '1rem', rotateZ: 1, scale: 1.2 }}
                     animate={{ opacity: 1, y: 0, rotateZ: 0, scale: 1 }}
                     transition={{ duration: 0.5, delay: 1 + (index + 5) * 0.03 }} // Adjusted delay

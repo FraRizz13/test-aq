@@ -57,11 +57,7 @@ body {
   flex-direction: column;
   @include body-16-machina;
 
-  // wont work on safari, replaced with stopOverscroll() ref: https://gsap.com/docs/v3/HelperFunctions/helpers/stopOverscroll/
   overscroll-behavior: none;
-
-  /* DON'T uncomment this otherwise sticky doesn't work! */
-  /* overflow-x: hidden; */
 }
 
 body {

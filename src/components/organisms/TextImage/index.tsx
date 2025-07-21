@@ -25,10 +25,8 @@ const TextImage = ({ title, image, description, alt }: TextImageProps) => {
       setIsDesktop(window.innerWidth >= 800)
     }
 
-    // Controlla la dimensione iniziale
     checkScreenSize()
 
-    // Aggiungi listener per il resize
     window.addEventListener('resize', checkScreenSize)
 
     // Cleanup
