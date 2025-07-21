@@ -98,6 +98,12 @@
       &.shop-now {
         background-color: black;
         color: white;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: var(--c-dark-gray);
+          color: var(--c-white);
+        }
       }
     }
   }
